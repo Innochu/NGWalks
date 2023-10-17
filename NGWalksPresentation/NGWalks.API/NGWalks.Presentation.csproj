@@ -20,4 +20,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NGWalksApplication\NGWalksApplication.csproj" />
+    <ProjectReference Include="..\NGWalksCommon\NGWalksCommon.csproj" />
+    <ProjectReference Include="..\NGWalksDomain\NGWalksDomain.csproj" />
+    <ProjectReference Include="..\NGWalksDTOValidations\NGWalksDTOValidations.csproj" />
+    <ProjectReference Include="..\NGWalksPersistence\NGWalksPersistence.csproj" />
+  </ItemGroup>
+
 </Project>

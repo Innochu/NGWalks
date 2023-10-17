@@ -1238,6 +1238,72 @@
             "rid": "win"
           }
         }
+      },
+      "NGWalksApplication/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3"
+        },
+        "compile": {
+          "bin/placeholder/NGWalksApplication.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NGWalksApplication.dll": {}
+        }
+      },
+      "NGWalksCommon/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3"
+        },
+        "compile": {
+          "bin/placeholder/NGWalksCommon.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NGWalksCommon.dll": {}
+        }
+      },
+      "NGWalksDomain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3"
+        },
+        "compile": {
+          "bin/placeholder/NGWalksDomain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NGWalksDomain.dll": {}
+        }
+      },
+      "NGWalksDTOValidations/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3"
+        },
+        "compile": {
+          "bin/placeholder/NGWalksDTOValidations.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NGWalksDTOValidations.dll": {}
+        }
+      },
+      "NGWalksPersistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
+          "NGWalksDomain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/NGWalksPersistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NGWalksPersistence.dll": {}
+        }
       }
     }
   },
@@ -3908,6 +3974,31 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "NGWalksApplication/1.0.0": {
+      "type": "project",
+      "path": "../NGWalksApplication/NGWalksApplication.csproj",
+      "msbuildProject": "../NGWalksApplication/NGWalksApplication.csproj"
+    },
+    "NGWalksCommon/1.0.0": {
+      "type": "project",
+      "path": "../NGWalksCommon/NGWalksCommon.csproj",
+      "msbuildProject": "../NGWalksCommon/NGWalksCommon.csproj"
+    },
+    "NGWalksDomain/1.0.0": {
+      "type": "project",
+      "path": "../NGWalksDomain/NGWalksDomain.csproj",
+      "msbuildProject": "../NGWalksDomain/NGWalksDomain.csproj"
+    },
+    "NGWalksDTOValidations/1.0.0": {
+      "type": "project",
+      "path": "../NGWalksDTOValidations/NGWalksDTOValidations.csproj",
+      "msbuildProject": "../NGWalksDTOValidations/NGWalksDTOValidations.csproj"
+    },
+    "NGWalksPersistence/1.0.0": {
+      "type": "project",
+      "path": "../NGWalksPersistence/NGWalksPersistence.csproj",
+      "msbuildProject": "../NGWalksPersistence/NGWalksPersistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3916,6 +4007,11 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.3",
+      "NGWalksApplication >= 1.0.0",
+      "NGWalksCommon >= 1.0.0",
+      "NGWalksDTOValidations >= 1.0.0",
+      "NGWalksDomain >= 1.0.0",
+      "NGWalksPersistence >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -3945,7 +4041,23 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksApplication\\NGWalksApplication.csproj": {
+              "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksApplication\\NGWalksApplication.csproj"
+            },
+            "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksCommon\\NGWalksCommon.csproj": {
+              "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksCommon\\NGWalksCommon.csproj"
+            },
+            "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDomain\\NGWalksDomain.csproj": {
+              "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDomain\\NGWalksDomain.csproj"
+            },
+            "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksDTOValidations.csproj": {
+              "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksDTOValidations.csproj"
+            },
+            "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksPersistence\\NGWalksPersistence.csproj": {
+              "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksPersistence\\NGWalksPersistence.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NGWalksDomain.Models
 {
-	public  class Regions
+	public  class Region
 	{
         public Guid  Id { get; set; }
         public string Code { get; set; } = String.Empty;
