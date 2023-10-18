@@ -1,0 +1,14 @@
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksDTOValidations\bin\Debug\net7.0\NGWalksDTOValidations.deps.json
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksDTOValidations\bin\Debug\net7.0\NGWalksDTOValidations.runtimeconfig.json
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksDTOValidations\bin\Debug\net7.0\NGWalksDTOValidations.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksDTOValidations\bin\Debug\net7.0\NGWalksDTOValidations.pdb
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksDTOValidations\obj\Debug\net7.0\NGWalksDTOValidations.csproj.AssemblyReference.cache
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksDTOValidations\obj\Debug\net7.0\NGWalksDTOValidations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksDTOValidations\obj\Debug\net7.0\NGWalksDTOValidations.AssemblyInfoInputs.cache
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksDTOValidations\obj\Debug\net7.0\NGWalksDTOValidations.AssemblyInfo.cs
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksDTOValidations\obj\Debug\net7.0\NGWalksDTOValidations.csproj.CoreCompileInputs.cache
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksDTOValidations\obj\Debug\net7.0\NGWalksDTOValidations.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksDTOValidations\obj\Debug\net7.0\refint\NGWalksDTOValidations.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksDTOValidations\obj\Debug\net7.0\NGWalksDTOValidations.pdb
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksDTOValidations\obj\Debug\net7.0\NGWalksDTOValidations.genruntimeconfig.cache
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksDTOValidations\obj\Debug\net7.0\ref\NGWalksDTOValidations.dll

@@ -1,0 +1,17 @@
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\bin\Debug\net7.0\NGWalksPersistence.deps.json
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\bin\Debug\net7.0\NGWalksPersistence.runtimeconfig.json
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\bin\Debug\net7.0\NGWalksPersistence.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\bin\Debug\net7.0\NGWalksPersistence.pdb
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\bin\Debug\net7.0\NGWalksDomain.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\bin\Debug\net7.0\NGWalksDomain.pdb
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\obj\Debug\net7.0\NGWalksPersistence.csproj.AssemblyReference.cache
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\obj\Debug\net7.0\NGWalksPersistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\obj\Debug\net7.0\NGWalksPersistence.AssemblyInfoInputs.cache
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\obj\Debug\net7.0\NGWalksPersistence.AssemblyInfo.cs
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\obj\Debug\net7.0\NGWalksPersistence.csproj.CoreCompileInputs.cache
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\obj\Debug\net7.0\NGWalksPersistence.csproj.CopyComplete
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\obj\Debug\net7.0\NGWalksPersistence.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\obj\Debug\net7.0\refint\NGWalksPersistence.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\obj\Debug\net7.0\NGWalksPersistence.pdb
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\obj\Debug\net7.0\NGWalksPersistence.genruntimeconfig.cache
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksPersistence\obj\Debug\net7.0\ref\NGWalksPersistence.dll

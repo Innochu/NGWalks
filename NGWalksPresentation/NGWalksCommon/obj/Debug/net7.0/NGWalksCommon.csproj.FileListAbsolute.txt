@@ -1,0 +1,14 @@
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksCommon\bin\Debug\net7.0\NGWalksCommon.deps.json
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksCommon\bin\Debug\net7.0\NGWalksCommon.runtimeconfig.json
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksCommon\bin\Debug\net7.0\NGWalksCommon.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksCommon\bin\Debug\net7.0\NGWalksCommon.pdb
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksCommon\obj\Debug\net7.0\NGWalksCommon.csproj.AssemblyReference.cache
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksCommon\obj\Debug\net7.0\NGWalksCommon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksCommon\obj\Debug\net7.0\NGWalksCommon.AssemblyInfoInputs.cache
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksCommon\obj\Debug\net7.0\NGWalksCommon.AssemblyInfo.cs
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksCommon\obj\Debug\net7.0\NGWalksCommon.csproj.CoreCompileInputs.cache
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksCommon\obj\Debug\net7.0\NGWalksCommon.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksCommon\obj\Debug\net7.0\refint\NGWalksCommon.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksCommon\obj\Debug\net7.0\NGWalksCommon.pdb
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksCommon\obj\Debug\net7.0\NGWalksCommon.genruntimeconfig.cache
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksCommon\obj\Debug\net7.0\ref\NGWalksCommon.dll

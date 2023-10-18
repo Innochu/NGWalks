@@ -13,8 +13,8 @@
 
         //navigation properties
 
-        public Difficulty Difficulty { get; set; }
-        public Regions Regions { get; set; }
+        public Difficulty Difficulty { get; set; } 
+        public Region Regions { get; set; }
 
 
     }
