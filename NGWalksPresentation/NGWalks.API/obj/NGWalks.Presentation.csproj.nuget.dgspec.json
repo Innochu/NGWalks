@@ -127,7 +127,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDomain\\NGWalksDomain.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDomain\\NGWalksDomain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -420,6 +424,9 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksApplication\\NGWalksApplication.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksApplication\\NGWalksApplication.csproj"
+              },
               "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDomain\\NGWalksDomain.csproj": {
                 "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDomain\\NGWalksDomain.csproj"
               }

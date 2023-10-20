@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NGWalksApplication\NGWalksApplication.csproj" />
     <ProjectReference Include="..\NGWalksDomain\NGWalksDomain.csproj" />
   </ItemGroup>
 

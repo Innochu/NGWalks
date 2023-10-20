@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NGWalksApplication;
 using NGWalksDomain.ModelDTO;
 using NGWalksDomain.Models;
 using NGWalksPersistence;
@@ -12,11 +13,13 @@ namespace NGWalks.Presentation.Controllers
 	public class RegionController : ControllerBase
 
 	{
-		private readonly NGDbContext _nGDbContext;
+		
+		private readonly IRegionRepo _iRegionRepo;
 
-		public RegionController(NGDbContext nGDbContext)
+		public RegionController(IRegionRepo iRegionRepo)
 		{
-			_nGDbContext = nGDbContext;
+			
+			_iRegionRepo = iRegionRepo;
 		}
 
 
@@ -24,10 +27,10 @@ namespace NGWalks.Presentation.Controllers
 		// Get : https://localhost:7293/api/Region
 		//GET ALL REGIONS
 		[HttpGet]
-		public IActionResult GetAll()
+		public async Task<IActionResult> GetAll()
 		{
 			//get data from database
-			var regions = _nGDbContext.Regions.ToList();
+			var regions = await _iRegionRepo.GetRegionsAsync();
 
 			//map domain models to DTO
 			var regionDTO = new List<RegionDTO>();
@@ -52,9 +55,9 @@ namespace NGWalks.Presentation.Controllers
 		//GET REGION BY ID
 		[HttpGet]
 		[Route("{id:Guid}")]
-		public IActionResult Get([FromRoute] Guid id)
+		public async Task<IActionResult> Get([FromRoute] Guid Id)
 		{
-			var region = _nGDbContext.Regions.FirstOrDefault(x => x.Id == id);
+			var region = await _iRegionRepo.GetRegionByIdAsync(Id); 
 			if (region == null)
 			{
 				return NotFound();
@@ -81,7 +84,7 @@ namespace NGWalks.Presentation.Controllers
 
 		[HttpPost]
 		//[Route ("{Id:Guid}")]
-		public IActionResult post( [FromBody] CreateRegionDTO createRegionDTO)
+		public async Task<IActionResult> post( [FromBody] CreateRegionDTO createRegionDTO)
 		{
 
 
@@ -94,8 +97,8 @@ namespace NGWalks.Presentation.Controllers
 
 			};
 			
-			_nGDbContext.Regions.Add(add);
-			_nGDbContext.SaveChanges();
+			await _iRegionRepo.CreateAsync(add);
+			
 
 			//map model to DTO
 			var add2 = new CreateRegionDTO()
@@ -114,10 +117,10 @@ namespace NGWalks.Presentation.Controllers
 		// Update : https://localhost:7293/api/Region/{id}
 		[HttpPut]
 		[Route("{id:Guid}")]
-		public IActionResult Update([FromRoute] Guid id, [FromBody] UpdateRegionDTO updateRegionDTO)
+		public async Task<IActionResult> Update([FromRoute] Guid Id, [FromBody] UpdateRegionDTO updateRegionDTO)
 		{
 
-			var update1 = _nGDbContext.Regions.FirstOrDefault(item => item.Id == id);
+			var update1 = await _iRegionRepo.UpdateRegionAsync(Id, updateRegionDTO);
 			if (update1 == null)
 			{
 				return NotFound();
@@ -128,7 +131,7 @@ namespace NGWalks.Presentation.Controllers
 			update1.Name = updateRegionDTO.Name;
 			update1.RegionImageUrl = updateRegionDTO.RegionImageUrl;
 
-			_nGDbContext.SaveChanges();
+			
 
 			//convert domain model to DTO model
 			var update2 = new UpdateRegionDTO
@@ -147,15 +150,13 @@ namespace NGWalks.Presentation.Controllers
 		[HttpDelete]
 		[Route ("{id:Guid}")]
 
-		public IActionResult Delete([FromRoute] Guid id)
+		public async Task<IActionResult> Delete([FromRoute] Guid Id)
 		{
-			var del = _nGDbContext.Regions.FirstOrDefault(item => item.Id == id);
-
+			var del = _iRegionRepo.DeleteRegion(Id);
             if (del == null)
 				return NotFound();
            
-			_nGDbContext.Regions.Remove(del);
-			_nGDbContext.SaveChanges();
+			
 			return Ok();
         }
 	}

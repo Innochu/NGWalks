@@ -1132,6 +1132,19 @@
             "rid": "win"
           }
         }
+      },
+      "NGWalksDomain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3"
+        },
+        "compile": {
+          "bin/placeholder/NGWalksDomain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NGWalksDomain.dll": {}
+        }
       }
     }
   },
@@ -3452,13 +3465,19 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "NGWalksDomain/1.0.0": {
+      "type": "project",
+      "path": "../NGWalksDomain/NGWalksDomain.csproj",
+      "msbuildProject": "../NGWalksDomain/NGWalksDomain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.EntityFrameworkCore.Design >= 7.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.3",
-      "Microsoft.EntityFrameworkCore.Tools >= 7.0.3"
+      "Microsoft.EntityFrameworkCore.Tools >= 7.0.3",
+      "NGWalksDomain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3487,7 +3506,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDomain\\NGWalksDomain.csproj": {
+              "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDomain\\NGWalksDomain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

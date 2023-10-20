@@ -1243,7 +1243,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3"
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
+          "NGWalksDomain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/NGWalksApplication.dll": {}
@@ -1296,6 +1297,7 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
+          "NGWalksApplication": "1.0.0",
           "NGWalksDomain": "1.0.0"
         },
         "compile": {
