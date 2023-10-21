@@ -38,15 +38,15 @@ namespace NGWalksPersistence.Repository
 
 		}
 
-		public async Task<Region> UpdateRegionAsync(Guid Id, UpdateRegionDTO updateRegionDTO)
+		public async Task<Region> UpdateRegionAsync(Guid Id, Region region)
 		{
 			var update = await _nGDbContext.Regions.FirstOrDefaultAsync(item => item.Id == Id);
 			if (update == null)
 				return null;
 
-			update.Name = updateRegionDTO.Name;
-			update.Code = updateRegionDTO.Code;
-			update.RegionImageUrl = updateRegionDTO.RegionImageUrl;
+			update.Name = region.Name;
+			update.Code = region.Code;
+			update.RegionImageUrl = region.RegionImageUrl;
 
 			await _nGDbContext.SaveChangesAsync();
 			return update;

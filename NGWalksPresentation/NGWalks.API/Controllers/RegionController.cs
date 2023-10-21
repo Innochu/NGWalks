@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using NGWalksApplication;
 using NGWalksDomain.ModelDTO;
 using NGWalksDomain.Models;
-using NGWalksPersistence;
+using NGWalksDTOValidations;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace NGWalks.Presentation.Controllers
 {
@@ -15,11 +16,13 @@ namespace NGWalks.Presentation.Controllers
 	{
 		
 		private readonly IRegionRepo _iRegionRepo;
+		private readonly IMapper _mapper;
 
-		public RegionController(IRegionRepo iRegionRepo)
+		public RegionController(IRegionRepo iRegionRepo, IMapper mapper)
 		{
 			
 			_iRegionRepo = iRegionRepo;
+			_mapper = mapper;
 		}
 
 
@@ -33,131 +36,110 @@ namespace NGWalks.Presentation.Controllers
 			var regions = await _iRegionRepo.GetRegionsAsync();
 
 			//map domain models to DTO
-			var regionDTO = new List<RegionDTO>();
-			foreach (var region in regions)
-			{
-				regionDTO.Add(new RegionDTO()
-				{
-					Id = region.Id,
-					Code = region.Code,
-					Name = region.Name,
-					RegionImageUrl = region.RegionImageUrl,
+			//var regionDTO = new List<RegionDTO>();
+			//foreach (var region in regions)
+			//{
+			//	regionDTO.Add(new RegionDTO()
+			//	{
+			//		Id = region.Id,
+			//		Code = region.Code,
+			//		Name = region.Name,
+			//		RegionImageUrl = region.RegionImageUrl,
 
-				});
-			}
+			//	});
+			//}
 
 
-			return Ok(regionDTO);
+
+			//return Ok(regionDTO);
+			return Ok(_mapper.Map<List<RegionDTO>>(regions));
 		}
 
 
 		// Get : https://localhost:7293/api/Region/{id}
 		//GET REGION BY ID
 		[HttpGet]
-		[Route("{id:Guid}")]
+		[Route("{Id:Guid}")]
 		public async Task<IActionResult> Get([FromRoute] Guid Id)
 		{
 			var region = await _iRegionRepo.GetRegionByIdAsync(Id); 
 			if (region == null)
-			{
+			
 				return NotFound();
-			}
-
-
-			//map region domain model into DTO
-			var regionDTO = new RegionDTO()
-			{
-				Id = region.Id,
-				Code = region.Code,
-				Name = region.Name,
-				RegionImageUrl = region.RegionImageUrl,
-			};
-
-
-
-			return Ok(regionDTO);
+			
+			return Ok (_mapper.Map<RegionDTO>(region));
+			
 		}
+
+
+
+
+
 
 
 		//Create Region from body
 		//create : https://localhost:7293/api/Region/{id}
 
 		[HttpPost]
+		[ModelStateValidation]
 		//[Route ("{Id:Guid}")]
-		public async Task<IActionResult> post( [FromBody] CreateRegionDTO createRegionDTO)
+		public async Task<IActionResult> Post( [FromBody] CreateRegionDTO createRegionDTO)
 		{
+			var add = _mapper.Map<Region>(createRegionDTO);
 
-
-			//map  DTO to domain model
-			var add = new Region
-			{
-				Code = createRegionDTO.Code,
-				Name = createRegionDTO.Name,
-				RegionImageUrl = createRegionDTO.RegionImageUrl
-
-			};
-			
-			await _iRegionRepo.CreateAsync(add);
+		 await _iRegionRepo.CreateAsync(add);
 			
 
-			//map model to DTO
-			var add2 = new CreateRegionDTO()
-			{
-				
-				Code = add.Code,
-				Name = add.Name,
-				RegionImageUrl = add.RegionImageUrl,
+			var	regionDTO = _mapper.Map<RegionDTO>(add);
 
-			};
-			
-			return Ok(add2);
+			return CreatedAtAction(nameof(Get), new { id = regionDTO.Id}, regionDTO);
 		}
+
+
+
+
 
 		//Update Region by id
 		// Update : https://localhost:7293/api/Region/{id}
 		[HttpPut]
-		[Route("{id:Guid}")]
+		[Route("{Id:Guid}")]
+		[ModelStateValidation]
 		public async Task<IActionResult> Update([FromRoute] Guid Id, [FromBody] UpdateRegionDTO updateRegionDTO)
 		{
 
-			var update1 = await _iRegionRepo.UpdateRegionAsync(Id, updateRegionDTO);
+			var update1 = _mapper.Map<Region>(updateRegionDTO);
+
+			update1  = await _iRegionRepo.UpdateRegionAsync(Id, update1);
+
 			if (update1 == null)
-			{
-				return NotFound();
-			}
-			//map DTO to Domian
 			
-			update1.Code = updateRegionDTO.Code;
-			update1.Name = updateRegionDTO.Name;
-			update1.RegionImageUrl = updateRegionDTO.RegionImageUrl;
-
+			return NotFound();
 			
+			return Ok(_mapper.Map<RegionDTO>(update1));
 
-			//convert domain model to DTO model
-			var update2 = new UpdateRegionDTO
-			{
-				//Id = update1.Id,
-				Code = update1.Code,
-				Name = update1.Name,
-				RegionImageUrl = update1.RegionImageUrl,
-			};
-			return Ok(update2);
+
 		}
+
+
+
+
+
 
 		//delete Region by Id
 		//Delete :  https://localhost:7293/api/Region/{id}
 
 		[HttpDelete]
-		[Route ("{id:Guid}")]
+		[Route ("{Id:Guid}")]
 
 		public async Task<IActionResult> Delete([FromRoute] Guid Id)
 		{
-			var del = _iRegionRepo.DeleteRegion(Id);
+			var del = await _iRegionRepo.DeleteRegion(Id);
             if (del == null)
 				return NotFound();
            
-			
-			return Ok();
+			return Ok(_mapper.Map<RegionDTO>(del));
+
+
         }
 	}
 }

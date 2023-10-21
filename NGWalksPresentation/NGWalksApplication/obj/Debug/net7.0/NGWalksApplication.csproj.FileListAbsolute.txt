@@ -2,11 +2,14 @@ C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\bin\Debu
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\bin\Debug\net7.0\NGWalksApplication.runtimeconfig.json
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\bin\Debug\net7.0\NGWalksApplication.dll
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\bin\Debug\net7.0\NGWalksApplication.pdb
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\bin\Debug\net7.0\NGWalksDomain.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\bin\Debug\net7.0\NGWalksDomain.pdb
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\obj\Debug\net7.0\NGWalksApplication.csproj.AssemblyReference.cache
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\obj\Debug\net7.0\NGWalksApplication.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\obj\Debug\net7.0\NGWalksApplication.AssemblyInfoInputs.cache
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\obj\Debug\net7.0\NGWalksApplication.AssemblyInfo.cs
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\obj\Debug\net7.0\NGWalksApplication.csproj.CoreCompileInputs.cache
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\obj\Debug\net7.0\NGWalksApplication.csproj.CopyComplete
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\obj\Debug\net7.0\NGWalksApplication.dll
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\obj\Debug\net7.0\refint\NGWalksApplication.dll
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalksApplication\obj\Debug\net7.0\NGWalksApplication.pdb
