@@ -30,30 +30,16 @@ namespace NGWalks.Presentation.Controllers
 		// Get : https://localhost:7293/api/Region
 		//GET ALL REGIONS
 		[HttpGet]
-		public async Task<IActionResult> GetAll()
+		public async Task<IActionResult> GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery)
 		{
 			//get data from database
-			var regions = await _iRegionRepo.GetRegionsAsync();
+			var regions = await _iRegionRepo.GetRegionsAsync(filterOn, filterQuery);
 
-			//map domain models to DTO
-			//var regionDTO = new List<RegionDTO>();
-			//foreach (var region in regions)
-			//{
-			//	regionDTO.Add(new RegionDTO()
-			//	{
-			//		Id = region.Id,
-			//		Code = region.Code,
-			//		Name = region.Name,
-			//		RegionImageUrl = region.RegionImageUrl,
-
-			//	});
-			//}
-
-
-
-			//return Ok(regionDTO);
+			
 			return Ok(_mapper.Map<List<RegionDTO>>(regions));
 		}
+
+
 
 
 		// Get : https://localhost:7293/api/Region/{id}
@@ -70,7 +56,6 @@ namespace NGWalks.Presentation.Controllers
 			return Ok (_mapper.Map<RegionDTO>(region));
 			
 		}
-
 
 
 

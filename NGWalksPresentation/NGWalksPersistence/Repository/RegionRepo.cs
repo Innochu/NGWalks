@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NGWalksApplication;
-using NGWalksDomain.ModelDTO;
 using NGWalksDomain.Models;
 
 namespace NGWalksPersistence.Repository
@@ -16,12 +15,24 @@ namespace NGWalksPersistence.Repository
 		}
 
 
-		public async Task<List<Region>> GetRegionsAsync()
-        {
-			var getall = await _nGDbContext.Regions.ToListAsync();
-			return getall;
-			
-        }
+		public async Task<List<Region>> GetRegionsAsync(string? filterOn = null, string? filterQuery = null)
+		{
+			var getall = _nGDbContext.Regions.AsQueryable();
+			if (!string.IsNullOrWhiteSpace(filterOn) && !string.IsNullOrWhiteSpace(filterQuery))
+			{
+				switch (filterOn.ToLowerInvariant())
+				{
+					case "name":
+						getall = getall.Where(region => EF.Functions.Like(region.Name, "%" + filterQuery + "%"));
+						break;
+					case "code":
+						getall = getall.Where(region => EF.Functions.Like(region.Code, "%" + filterQuery + "%"));
+						break;
+				}
+			}
+			return await getall.ToListAsync();
+		}
+
 
 		public async Task<Region> GetRegionByIdAsync(Guid Id)
 		{

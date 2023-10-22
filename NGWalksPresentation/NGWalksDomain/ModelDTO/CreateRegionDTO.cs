@@ -7,3 +7,4 @@
 		public string RegionImageUrl { get; set; } = String.Empty;
 	}
 }
+				
