@@ -30,11 +30,13 @@ namespace NGWalks.Presentation.Controllers
 		// Get : https://localhost:7293/api/Region
 		//GET ALL REGIONS
 		[HttpGet]
-		public async Task<IActionResult> GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery)
+		public async Task<IActionResult> GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery, 
+			[FromQuery] string? sortBy, [FromQuery] bool isAscending,
+			[FromQuery] int pageNumber , [FromQuery] int pageSize )
 		{
 			//get data from database
-			var regions = await _iRegionRepo.GetRegionsAsync(filterOn, filterQuery);
-
+			var regions = await _iRegionRepo.GetRegionsAsync(filterOn, filterQuery, sortBy, isAscending, pageNumber, pageSize);
+			
 			
 			return Ok(_mapper.Map<List<RegionDTO>>(regions));
 		}

@@ -15,9 +15,13 @@ namespace NGWalksPersistence.Repository
 		}
 
 
-		public async Task<List<Region>> GetRegionsAsync(string? filterOn = null, string? filterQuery = null)
+		public async Task<List<Region>> GetRegionsAsync(string? filterOn = null, string? filterQuery = null,
+			string? sortBy = null, bool isAscending = true, int pageNumber = 1, int pageSize = 1000)
+
 		{
 			var getall = _nGDbContext.Regions.AsQueryable();
+
+			//filtering
 			if (!string.IsNullOrWhiteSpace(filterOn) && !string.IsNullOrWhiteSpace(filterQuery))
 			{
 				switch (filterOn.ToLowerInvariant())
@@ -30,7 +34,21 @@ namespace NGWalksPersistence.Repository
 						break;
 				}
 			}
-			return await getall.ToListAsync();
+
+			//sorting
+
+			if(string.IsNullOrWhiteSpace(sortBy) == false)
+			{
+				if(sortBy.Equals("name", StringComparison.OrdinalIgnoreCase))
+				{
+					getall = isAscending ? getall.OrderBy(item => item.Name) : getall.OrderByDescending(item => item.Name);
+				}
+			}
+
+			//filtering
+			var skipResult = (pageNumber - 1) * pageSize;
+
+			return await getall.Skip(pageNumber).Take(pageSize).ToListAsync();
 		}
 
 
