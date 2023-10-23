@@ -1,16 +1,17 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NGWalksApplication;
 using NGWalksDomain.ModelDTO;
 using NGWalksDomain.Models;
 using NGWalksDTOValidations;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace NGWalks.Presentation.Controllers
 {
 	//https://localhost:7293/api/region
 	[Route("api/[controller]")]
 	[ApiController]
+	[Authorize]
 	public class RegionController : ControllerBase
 
 	{
