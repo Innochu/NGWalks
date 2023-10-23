@@ -54,7 +54,7 @@ namespace NGWalksPersistence.Repository
 
 		public async Task<Region> GetRegionByIdAsync(Guid Id)
 		{
-			var getId = await _nGDbContext.Regions.FirstOrDefaultAsync(item => item.Id == Id);
+			 await _nGDbContext.Regions.FirstOrDefaultAsync(item => item.Id == Id);
 
 			return getId;
 		}
