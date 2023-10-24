@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NGWalksDomain.ModelDTO;
+using NGWalksValidations;
+using LoginRequestDTO = NGWalksDomain.ModelDTO.LoginRequestDTO;
 
 namespace NGWalks.Presentation.Controllers
 {
@@ -51,5 +54,29 @@ namespace NGWalks.Presentation.Controllers
 			}
 			return BadRequest("Unsuccessful Registeration");
 		}
+
+
+
+		//Post : http/api/Auth/login
+		[HttpPost]
+		[Route("Login")]
+		public async Task<IActionResult> Login([FromBody] LoginRequestDTO loginRequestDTO)
+		{
+			var user = await _userManager.FindByEmailAsync(loginRequestDTO.UserName);
+			
+			if (user != null)
+			{
+				var checkPasswordResult = await _userManager.CheckPasswordAsync(user, loginRequestDTO.Password);
+
+				if (checkPasswordResult)
+				{
+					return Ok("Login Successful!");
+				}
+				
+			}
+
+			return BadRequest("UserName or Password incorrect");
+		}
+
 	}
 }
