@@ -4476,9 +4476,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksDTOValidations.csproj",
-      "projectName": "NGWalksDTOValidations",
-      "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksDTOValidations.csproj",
+      "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksValidations.csproj",
+      "projectName": "NGWalksValidations",
+      "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksValidations.csproj",
       "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\obj\\",
       "projectStyle": "PackageReference",

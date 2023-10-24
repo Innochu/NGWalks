@@ -22,9 +22,9 @@
           "Microsoft.IdentityModel.Tokens": "7.0.1",
           "NGWalksApplication": "1.0.0",
           "NGWalksCommon": "1.0.0",
-          "NGWalksDTOValidations": "1.0.0",
           "NGWalksDomain": "1.0.0",
           "NGWalksPersistence": "1.0.0",
+          "NGWalksValidations": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0",
           "System.IdentityModel.Tokens.Jwt": "7.0.1"
         },
@@ -993,24 +993,6 @@
           "NGWalksDomain.dll": {}
         }
       },
-      "NGWalksDTOValidations/1.0.0": {
-        "dependencies": {
-          "AutoMapper": "12.0.1",
-          "FluentValidation": "11.7.1",
-          "FluentValidation.AspNetCore": "11.3.0",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.1",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.1",
-          "Microsoft.AspNetCore.Mvc.Abstractions": "2.1.38",
-          "Microsoft.AspNetCore.Mvc.Core": "2.1.38",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
-          "Microsoft.IdentityModel.Tokens": "7.0.1",
-          "NGWalksDomain": "1.0.0",
-          "System.IdentityModel.Tokens.Jwt": "7.0.1"
-        },
-        "runtime": {
-          "NGWalksDTOValidations.dll": {}
-        }
-      },
       "NGWalksPersistence/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
@@ -1027,6 +1009,24 @@
         },
         "runtime": {
           "NGWalksPersistence.dll": {}
+        }
+      },
+      "NGWalksValidations/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "FluentValidation": "11.7.1",
+          "FluentValidation.AspNetCore": "11.3.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.1",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.1",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.1.38",
+          "Microsoft.AspNetCore.Mvc.Core": "2.1.38",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
+          "Microsoft.IdentityModel.Tokens": "7.0.1",
+          "NGWalksDomain": "1.0.0",
+          "System.IdentityModel.Tokens.Jwt": "7.0.1"
+        },
+        "runtime": {
+          "NGWalksValidations.dll": {}
         }
       }
     }
@@ -1787,12 +1787,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "NGWalksDTOValidations/1.0.0": {
+    "NGWalksPersistence/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "NGWalksPersistence/1.0.0": {
+    "NGWalksValidations/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

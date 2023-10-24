@@ -33,7 +33,7 @@
     <ProjectReference Include="..\NGWalksApplication\NGWalksApplication.csproj" />
     <ProjectReference Include="..\NGWalksCommon\NGWalksCommon.csproj" />
     <ProjectReference Include="..\NGWalksDomain\NGWalksDomain.csproj" />
-    <ProjectReference Include="..\NGWalksDTOValidations\NGWalksDTOValidations.csproj" />
+    <ProjectReference Include="..\NGWalksDTOValidations\NGWalksValidations.csproj" />
     <ProjectReference Include="..\NGWalksPersistence\NGWalksPersistence.csproj" />
   </ItemGroup>
 

@@ -61,12 +61,10 @@ C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\NGWalksApplication.dll
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\NGWalksCommon.dll
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\NGWalksDomain.dll
-C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\NGWalksDTOValidations.dll
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\NGWalksPersistence.dll
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\NGWalksApplication.pdb
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\NGWalksCommon.pdb
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\NGWalksDomain.pdb
-C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\NGWalksDTOValidations.pdb
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\NGWalksPersistence.pdb
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\obj\Debug\net7.0\NGWalks.Presentation.csproj.AssemblyReference.cache
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\obj\Debug\net7.0\NGWalks.Presentation.GeneratedMSBuildEditorConfig.editorconfig
@@ -95,3 +93,5 @@ C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\NGWalksValidations.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\NGWalksValidations.pdb

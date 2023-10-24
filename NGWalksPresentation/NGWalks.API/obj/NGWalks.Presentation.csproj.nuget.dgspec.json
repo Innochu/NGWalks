@@ -37,8 +37,8 @@
               "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDomain\\NGWalksDomain.csproj": {
                 "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDomain\\NGWalksDomain.csproj"
               },
-              "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksDTOValidations.csproj": {
-                "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksDTOValidations.csproj"
+              "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksValidations.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksValidations.csproj"
               },
               "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksPersistence\\NGWalksPersistence.csproj": {
                 "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksPersistence\\NGWalksPersistence.csproj"
@@ -459,12 +459,12 @@
         }
       }
     },
-    "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksDTOValidations.csproj": {
+    "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksValidations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksDTOValidations.csproj",
-        "projectName": "NGWalksDTOValidations",
-        "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksDTOValidations.csproj",
+        "projectUniqueName": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksValidations.csproj",
+        "projectName": "NGWalksValidations",
+        "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksValidations.csproj",
         "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\obj\\",
         "projectStyle": "PackageReference",

@@ -1838,29 +1838,6 @@
           "bin/placeholder/NGWalksDomain.dll": {}
         }
       },
-      "NGWalksDTOValidations/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "AutoMapper": "12.0.1",
-          "FluentValidation": "11.7.1",
-          "FluentValidation.AspNetCore": "11.3.0",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.1",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.1",
-          "Microsoft.AspNetCore.Mvc.Abstractions": "2.1.38",
-          "Microsoft.AspNetCore.Mvc.Core": "2.1.38",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
-          "Microsoft.IdentityModel.Tokens": "7.0.1",
-          "NGWalksDomain": "1.0.0",
-          "System.IdentityModel.Tokens.Jwt": "7.0.1"
-        },
-        "compile": {
-          "bin/placeholder/NGWalksDTOValidations.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/NGWalksDTOValidations.dll": {}
-        }
-      },
       "NGWalksPersistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1882,6 +1859,29 @@
         },
         "runtime": {
           "bin/placeholder/NGWalksPersistence.dll": {}
+        }
+      },
+      "NGWalksValidations/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "FluentValidation": "11.7.1",
+          "FluentValidation.AspNetCore": "11.3.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.1",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.1",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.1.38",
+          "Microsoft.AspNetCore.Mvc.Core": "2.1.38",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
+          "Microsoft.IdentityModel.Tokens": "7.0.1",
+          "NGWalksDomain": "1.0.0",
+          "System.IdentityModel.Tokens.Jwt": "7.0.1"
+        },
+        "compile": {
+          "bin/placeholder/NGWalksValidations.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NGWalksValidations.dll": {}
         }
       }
     }
@@ -5034,15 +5034,15 @@
       "path": "../NGWalksDomain/NGWalksDomain.csproj",
       "msbuildProject": "../NGWalksDomain/NGWalksDomain.csproj"
     },
-    "NGWalksDTOValidations/1.0.0": {
-      "type": "project",
-      "path": "../NGWalksDTOValidations/NGWalksDTOValidations.csproj",
-      "msbuildProject": "../NGWalksDTOValidations/NGWalksDTOValidations.csproj"
-    },
     "NGWalksPersistence/1.0.0": {
       "type": "project",
       "path": "../NGWalksPersistence/NGWalksPersistence.csproj",
       "msbuildProject": "../NGWalksPersistence/NGWalksPersistence.csproj"
+    },
+    "NGWalksValidations/1.0.0": {
+      "type": "project",
+      "path": "../NGWalksDTOValidations/NGWalksValidations.csproj",
+      "msbuildProject": "../NGWalksDTOValidations/NGWalksValidations.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5061,9 +5061,9 @@
       "Microsoft.IdentityModel.Tokens >= 7.0.1",
       "NGWalksApplication >= 1.0.0",
       "NGWalksCommon >= 1.0.0",
-      "NGWalksDTOValidations >= 1.0.0",
       "NGWalksDomain >= 1.0.0",
       "NGWalksPersistence >= 1.0.0",
+      "NGWalksValidations >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0",
       "System.IdentityModel.Tokens.Jwt >= 7.0.1"
     ]
@@ -5104,8 +5104,8 @@
             "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDomain\\NGWalksDomain.csproj": {
               "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDomain\\NGWalksDomain.csproj"
             },
-            "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksDTOValidations.csproj": {
-              "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksDTOValidations.csproj"
+            "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksValidations.csproj": {
+              "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksDTOValidations\\NGWalksValidations.csproj"
             },
             "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksPersistence\\NGWalksPersistence.csproj": {
               "projectPath": "C:\\Users\\Decagon\\Desktop\\NGWalks\\NGWalksPresentation\\NGWalksPersistence\\NGWalksPersistence.csproj"
