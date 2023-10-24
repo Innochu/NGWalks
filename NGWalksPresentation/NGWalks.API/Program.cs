@@ -22,10 +22,10 @@ builder.Services.AddControllers().AddFluentValidation(fv => fv.RegisterValidator
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
-	options.SwaggerDoc("V1", new OpenApiInfo
+	options.SwaggerDoc("v1", new OpenApiInfo
 	{
-		Title = "NG Walks API",
-		Version = "V1"
+		Title = "NG WALKS API",
+		Version = "v1"
 	});
 
 	options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme
@@ -45,7 +45,7 @@ builder.Services.AddSwaggerGen(options =>
 				Reference = new OpenApiReference
 				{
 					Type = ReferenceType.SecurityScheme,
-					Id = JwtBearerDefaults.AuthenticationScheme
+					Id = JwtBearerDefaults.AuthenticationScheme,
 					
 				},
 				Scheme = "Oauth2",
