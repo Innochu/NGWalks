@@ -95,3 +95,12 @@ C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\obj\Debug\net7.
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\obj\Debug\net7.0\NGWalks.Presentation.pdb
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\obj\Debug\net7.0\NGWalks.Presentation.genruntimeconfig.cache
 C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\obj\Debug\net7.0\ref\NGWalks.Presentation.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\Serilog.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\Serilog.AspNetCore.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\Serilog.Extensions.Hosting.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\Serilog.Extensions.Logging.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\Serilog.Formatting.Compact.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\Serilog.Settings.Configuration.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\Serilog.Sinks.Console.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\Serilog.Sinks.Debug.dll
+C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\bin\Debug\net7.0\Serilog.Sinks.File.dll

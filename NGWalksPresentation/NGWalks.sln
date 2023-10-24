@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NGWalksValidations", "NGWal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NGWalksCommon", "NGWalksCommon\NGWalksCommon.csproj", "{1CF2A8FD-4ED3-455E-BD23-32BF50AD5A1C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serilog", "Serilog", "{C6A5B4BB-B6C1-42E7-9250-BF32DEBEE3E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

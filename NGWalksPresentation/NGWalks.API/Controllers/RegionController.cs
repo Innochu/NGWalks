@@ -5,6 +5,7 @@ using NGWalksApplication;
 using NGWalksDomain.ModelDTO;
 using NGWalksDomain.Models;
 using NGWalksDTOValidations;
+using System.Text.Json;
 
 namespace NGWalks.Presentation.Controllers
 {
@@ -18,12 +19,14 @@ namespace NGWalks.Presentation.Controllers
 		
 		private readonly IRegionRepo _iRegionRepo;
 		private readonly IMapper _mapper;
+		private readonly ILogger _logger;
 
-		public RegionController(IRegionRepo iRegionRepo, IMapper mapper)
+		public RegionController(IRegionRepo iRegionRepo, IMapper mapper, ILogger<RegionController> logger )
 		{
 			
 			_iRegionRepo = iRegionRepo;
 			_mapper = mapper;
+			_logger = logger;
 		}
 
 
@@ -31,16 +34,30 @@ namespace NGWalks.Presentation.Controllers
 		// Get : https://localhost:7293/api/Region
 		//GET ALL REGIONS
 		[HttpGet]
-		[Authorize(Roles = "Reader")]
+		//[Authorize(Roles = "Reader")]
 		public async Task<IActionResult> GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery, 
 			[FromQuery] string? sortBy, [FromQuery] bool isAscending,
 			[FromQuery] int pageNumber , [FromQuery] int pageSize )
 		{
-			//get data from database
-			var regions = await _iRegionRepo.GetRegionsAsync(filterOn, filterQuery, sortBy, isAscending, pageNumber, pageSize);
+			try
+			{
+				//throw new Exception("This is a custom exception");
+
+				//_logger.LogInformation("GetAll Region action method was invoked");
+				//get data from database
+				var regions = await _iRegionRepo.GetRegionsAsync(filterOn, filterQuery, sortBy, isAscending, pageNumber, pageSize);
+
+				_logger.LogInformation($"Finished GetAllRegion Request with data: {JsonSerializer.Serialize(regions)}");
+				//this will convert the data into jason data
+				return Ok(_mapper.Map<List<RegionDTO>>(regions));
+			}
+			catch (Exception ex)
+			{
+
+				_logger.LogError(ex, ex.Message);
+				throw;
+			}
 			
-			
-			return Ok(_mapper.Map<List<RegionDTO>>(regions));
 		}
 
 
@@ -80,7 +97,7 @@ namespace NGWalks.Presentation.Controllers
 
 		 await _iRegionRepo.CreateAsync(add);
 			
-
+			
 			var	regionDTO = _mapper.Map<RegionDTO>(add);
 
 			return CreatedAtAction(nameof(Get), new { id = regionDTO.Id}, regionDTO);
