@@ -18,6 +18,8 @@ builder.Services.AddControllers().AddFluentValidation(fv => fv.RegisterValidator
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<NGDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("NGWalksConnextionString")));
+builder.Services.AddDbContext<NGAuthDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("NGWalksAuthConnextionString")));
+
 builder.Services.AddScoped<IRegionRepo, RegionRepo>();
 builder.Services.AddAutoMapper(typeof(RegionAutomapper));
 
