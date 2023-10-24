@@ -11,7 +11,7 @@ namespace NGWalks.Presentation.Controllers
 	//https://localhost:7293/api/region
 	[Route("api/[controller]")]
 	[ApiController]
-	[Authorize]
+	
 	public class RegionController : ControllerBase
 
 	{
@@ -31,6 +31,7 @@ namespace NGWalks.Presentation.Controllers
 		// Get : https://localhost:7293/api/Region
 		//GET ALL REGIONS
 		[HttpGet]
+		[Authorize(Roles = "Reader")]
 		public async Task<IActionResult> GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery, 
 			[FromQuery] string? sortBy, [FromQuery] bool isAscending,
 			[FromQuery] int pageNumber , [FromQuery] int pageSize )
@@ -49,6 +50,7 @@ namespace NGWalks.Presentation.Controllers
 		//GET REGION BY ID
 		[HttpGet]
 		[Route("{Id:Guid}")]
+		[Authorize(Roles = "Reader")]
 		public async Task<IActionResult> Get([FromRoute] Guid Id)
 		{
 			var region = await _iRegionRepo.GetRegionByIdAsync(Id); 
@@ -70,6 +72,7 @@ namespace NGWalks.Presentation.Controllers
 
 		[HttpPost]
 		[ModelStateValidation]
+		[Authorize(Roles = "Writer")]
 		//[Route ("{Id:Guid}")]
 		public async Task<IActionResult> Post( [FromBody] CreateRegionDTO createRegionDTO)
 		{
@@ -92,6 +95,7 @@ namespace NGWalks.Presentation.Controllers
 		[HttpPut]
 		[Route("{Id:Guid}")]
 		[ModelStateValidation]
+		[Authorize(Roles = "Writer")]
 		public async Task<IActionResult> Update([FromRoute] Guid Id, [FromBody] UpdateRegionDTO updateRegionDTO)
 		{
 
@@ -118,7 +122,7 @@ namespace NGWalks.Presentation.Controllers
 
 		[HttpDelete]
 		[Route ("{Id:Guid}")]
-
+		[Authorize(Roles = "Writer")]
 		public async Task<IActionResult> Delete([FromRoute] Guid Id)
 		{
 			var del = await _iRegionRepo.DeleteRegion(Id);

@@ -2,21 +2,25 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using NGWalksApplication;
 using NGWalksDomain.ModelDTO;
+using NGWalksDomain.ModelDTO.LoginDTO;
 using NGWalksValidations;
-using LoginRequestDTO = NGWalksDomain.ModelDTO.LoginRequestDTO;
+using LoginRequestDTO = NGWalksDomain.ModelDTO.LoginDTO.LoginRequestDTO;
 
 namespace NGWalks.Presentation.Controllers
 {
-	[Route("api/[controller]")]
+    [Route("api/[controller]")]
 	[ApiController]
 	public class AuthController : ControllerBase
 	{
 		private readonly UserManager<IdentityUser> _userManager;
+		private readonly ITokenRepo _tokenRepo;
 
-		public AuthController(UserManager<IdentityUser> userManager)
+		public AuthController(UserManager<IdentityUser> userManager, ITokenRepo tokenRepo)
         {
 			_userManager = userManager;
+			_tokenRepo = tokenRepo;
 		}
 
 
@@ -70,7 +74,19 @@ namespace NGWalks.Presentation.Controllers
 
 				if (checkPasswordResult)
 				{
-					return Ok("Login Successful!");
+					var roles = await _userManager.GetRolesAsync(user);
+					if(roles != null)
+					{
+					var jwtToken =	_tokenRepo.CreateJwtToken(user, roles.ToList());
+
+						var response = new LoginResponseDTO
+						{
+							JwtToken = jwtToken,
+						};
+						return Ok(response);
+					}
+					
+					
 				}
 				
 			}

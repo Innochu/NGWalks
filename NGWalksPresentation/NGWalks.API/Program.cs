@@ -8,8 +8,9 @@ using NGWalksApplication;
 using NGWalksPersistence;
 using NGWalksPersistence.Repository;
 using NGWalksValidations.DTOFluentValidations;
+using System.Reflection;
 using System.Text;
-
+using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -19,11 +20,51 @@ builder.Services.AddControllers().AddFluentValidation(fv => fv.RegisterValidator
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+	options.SwaggerDoc("V1", new OpenApiInfo
+	{
+		Title = "NG Walks API",
+		Version = "V1"
+	});
+
+	options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme
+	{
+		Name = "Authorization",
+		In = ParameterLocation.Header,
+		Type = SecuritySchemeType.ApiKey,
+		Scheme = JwtBearerDefaults.AuthenticationScheme
+
+	});
+
+	options.AddSecurityRequirement(new OpenApiSecurityRequirement
+	{
+		{
+			new OpenApiSecurityScheme
+			{
+				Reference = new OpenApiReference
+				{
+					Type = ReferenceType.SecurityScheme,
+					Id = JwtBearerDefaults.AuthenticationScheme
+					
+				},
+				Scheme = "Oauth2",
+				Name = JwtBearerDefaults.AuthenticationScheme,
+				In = ParameterLocation.Header
+
+				
+			},
+			new List<string>()
+		}
+	});
+});
 builder.Services.AddDbContext<NGDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("NGWalksConnextionString")));
 builder.Services.AddDbContext<NGAuthDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("NGWalksAuthConnextionString")));
 
 builder.Services.AddScoped<IRegionRepo, RegionRepo>();
+builder.Services.AddScoped<ITokenRepo, TokenRepo>();
+
+
 builder.Services.AddAutoMapper(typeof(RegionAutomapper));
 
 builder.Services.AddIdentityCore<IdentityUser>()
