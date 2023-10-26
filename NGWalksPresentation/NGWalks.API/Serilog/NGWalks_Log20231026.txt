@@ -1,0 +1,13 @@
+2023-10-26 13:08:23.999 +01:00 [INF] User profile is available. Using 'C:\Users\Decagon\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-26 13:08:24.464 +01:00 [INF] Now listening on: http://localhost:5126
+2023-10-26 13:08:24.475 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-26 13:08:24.478 +01:00 [INF] Hosting environment: Development
+2023-10-26 13:08:24.480 +01:00 [INF] Content root path: C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API
+2023-10-26 13:08:41.335 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/swagger/index.html - -
+2023-10-26 13:08:42.787 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/swagger/index.html - - - 200 - text/html;charset=utf-8 1468.3515ms
+2023-10-26 13:08:42.835 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/_framework/aspnetcore-browser-refresh.js - -
+2023-10-26 13:08:42.849 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/_vs/browserLink - -
+2023-10-26 13:08:42.908 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 72.9493ms
+2023-10-26 13:08:43.065 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 215.4821ms
+2023-10-26 13:08:43.399 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/swagger/v1/swagger.json - -
+2023-10-26 13:08:43.987 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 587.6522ms

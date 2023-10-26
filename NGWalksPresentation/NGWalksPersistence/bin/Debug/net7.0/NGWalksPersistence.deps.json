@@ -23,6 +23,7 @@
           "Serilog": "3.0.1",
           "Serilog.AspNetCore": "7.0.0",
           "Serilog.Sinks.Console": "4.1.0",
+          "Serilog.Sinks.File": "5.0.0",
           "System.IdentityModel.Tokens.Jwt": "7.0.1"
         },
         "runtime": {
@@ -1000,6 +1001,7 @@
           "Serilog": "3.0.1",
           "Serilog.AspNetCore": "7.0.0",
           "Serilog.Sinks.Console": "4.1.0",
+          "Serilog.Sinks.File": "5.0.0",
           "System.IdentityModel.Tokens.Jwt": "7.0.1"
         },
         "runtime": {
@@ -1019,6 +1021,7 @@
           "Serilog": "3.0.1",
           "Serilog.AspNetCore": "7.0.0",
           "Serilog.Sinks.Console": "4.1.0",
+          "Serilog.Sinks.File": "5.0.0",
           "System.IdentityModel.Tokens.Jwt": "7.0.1"
         },
         "runtime": {

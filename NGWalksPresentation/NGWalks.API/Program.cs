@@ -12,6 +12,7 @@ using System.Reflection;
 using System.Text;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using NGWalksCommon;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +20,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var logger = new LoggerConfiguration()
 	.WriteTo.Console()
-	.WriteTo.File()
+	.WriteTo.File("Serilog/NGWalks_Log.txt", rollingInterval:  RollingInterval.Day)
 	.MinimumLevel.Information()
 	.CreateLogger();
 
@@ -120,6 +121,7 @@ if (app.Environment.IsDevelopment())
 	app.UseSwaggerUI();
 }
 
+app.UseMiddleware<ExceptionHandling>();     //registered my global exception handler class
 app.UseHttpsRedirection();
 
 

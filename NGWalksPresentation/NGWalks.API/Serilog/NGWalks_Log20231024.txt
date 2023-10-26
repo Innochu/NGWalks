@@ -1,0 +1,52 @@
+2023-10-24 15:29:33.351 +01:00 [INF] User profile is available. Using 'C:\Users\Decagon\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-24 15:29:33.836 +01:00 [INF] Now listening on: http://localhost:5126
+2023-10-24 15:29:33.845 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-24 15:29:33.849 +01:00 [INF] Hosting environment: Development
+2023-10-24 15:29:33.854 +01:00 [INF] Content root path: C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API
+2023-10-24 15:29:44.129 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/swagger/index.html - -
+2023-10-24 15:29:45.015 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/swagger/index.html - - - 200 - text/html;charset=utf-8 897.3702ms
+2023-10-24 15:29:45.078 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/_vs/browserLink - -
+2023-10-24 15:29:45.084 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/_framework/aspnetcore-browser-refresh.js - -
+2023-10-24 15:29:45.119 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 34.7351ms
+2023-10-24 15:29:45.181 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 102.5469ms
+2023-10-24 15:29:45.332 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/swagger/v1/swagger.json - -
+2023-10-24 15:29:45.733 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 400.8985ms
+2023-10-24 15:29:53.143 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/api/Region - -
+2023-10-24 15:29:53.176 +01:00 [WRN] Failed to determine the https port for redirect.
+2023-10-24 15:29:53.436 +01:00 [INF] Executing endpoint 'NGWalks.Presentation.Controllers.RegionController.GetAll (NGWalks.Presentation)'
+2023-10-24 15:29:53.515 +01:00 [INF] Route matched with {action = "GetAll", controller = "Region"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller NGWalks.Presentation.Controllers.RegionController (NGWalks.Presentation).
+2023-10-24 15:29:55.755 +01:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-10-24 15:29:55.760 +01:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-10-24 15:29:56.852 +01:00 [INF] Executed DbCommand (117ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+WHERE 0 = 1
+2023-10-24 15:29:56.943 +01:00 [INF] Finished GetAllRegion Request with data: []
+2023-10-24 15:29:57.004 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NGWalksDomain.ModelDTO.RegionDTO, NGWalksDomain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-24 15:29:57.034 +01:00 [INF] Executed action NGWalks.Presentation.Controllers.RegionController.GetAll (NGWalks.Presentation) in 3499.001ms
+2023-10-24 15:29:57.043 +01:00 [INF] Executed endpoint 'NGWalks.Presentation.Controllers.RegionController.GetAll (NGWalks.Presentation)'
+2023-10-24 15:29:57.068 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/api/Region - - - 200 - application/json;+charset=utf-8 3924.8689ms
+2023-10-24 15:31:22.419 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/api/Region - -
+2023-10-24 15:31:22.454 +01:00 [INF] Executing endpoint 'NGWalks.Presentation.Controllers.RegionController.GetAll (NGWalks.Presentation)'
+2023-10-24 15:31:22.460 +01:00 [INF] Route matched with {action = "GetAll", controller = "Region"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller NGWalks.Presentation.Controllers.RegionController (NGWalks.Presentation).
+2023-10-24 15:31:22.576 +01:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+WHERE 0 = 1
+2023-10-24 15:31:22.585 +01:00 [INF] Finished GetAllRegion Request with data: []
+2023-10-24 15:31:22.591 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NGWalksDomain.ModelDTO.RegionDTO, NGWalksDomain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-24 15:31:22.598 +01:00 [INF] Executed action NGWalks.Presentation.Controllers.RegionController.GetAll (NGWalks.Presentation) in 130.0208ms
+2023-10-24 15:31:22.603 +01:00 [INF] Executed endpoint 'NGWalks.Presentation.Controllers.RegionController.GetAll (NGWalks.Presentation)'
+2023-10-24 15:31:22.609 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/api/Region - - - 200 - application/json;+charset=utf-8 190.7226ms
+2023-10-24 15:31:27.438 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/api/Region - -
+2023-10-24 15:31:27.449 +01:00 [INF] Executing endpoint 'NGWalks.Presentation.Controllers.RegionController.GetAll (NGWalks.Presentation)'
+2023-10-24 15:31:27.457 +01:00 [INF] Route matched with {action = "GetAll", controller = "Region"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller NGWalks.Presentation.Controllers.RegionController (NGWalks.Presentation).
+2023-10-24 15:31:27.670 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+WHERE 0 = 1
+2023-10-24 15:31:27.678 +01:00 [INF] Finished GetAllRegion Request with data: []
+2023-10-24 15:31:27.681 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NGWalksDomain.ModelDTO.RegionDTO, NGWalksDomain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-24 15:31:27.686 +01:00 [INF] Executed action NGWalks.Presentation.Controllers.RegionController.GetAll (NGWalks.Presentation) in 222.9374ms
+2023-10-24 15:31:27.691 +01:00 [INF] Executed endpoint 'NGWalks.Presentation.Controllers.RegionController.GetAll (NGWalks.Presentation)'
+2023-10-24 15:31:27.696 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/api/Region - - - 200 - application/json;+charset=utf-8 257.8051ms

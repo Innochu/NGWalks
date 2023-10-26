@@ -22,6 +22,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NGWalksCommon", "NGWalksCommon\NGWalksCommon.csproj", "{1CF2A8FD-4ED3-455E-BD23-32BF50AD5A1C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serilog", "Serilog", "{C6A5B4BB-B6C1-42E7-9250-BF32DEBEE3E0}"
+	ProjectSection(SolutionItems) = preProject
+		NGWalks.API\Serilog\NGWalks_Log20231024.txt = NGWalks.API\Serilog\NGWalks_Log20231024.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGWalks.UI", "NGWalks.UI\NGWalks.UI.csproj", "{5BCC59BB-EE08-4A29-ADF1-996D64AFD3BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +58,10 @@ Global
 		{1CF2A8FD-4ED3-455E-BD23-32BF50AD5A1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CF2A8FD-4ED3-455E-BD23-32BF50AD5A1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CF2A8FD-4ED3-455E-BD23-32BF50AD5A1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BCC59BB-EE08-4A29-ADF1-996D64AFD3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BCC59BB-EE08-4A29-ADF1-996D64AFD3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BCC59BB-EE08-4A29-ADF1-996D64AFD3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BCC59BB-EE08-4A29-ADF1-996D64AFD3BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
