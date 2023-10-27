@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NGWalks.UI.Models.Dto;
 
 namespace NGWalks.UI.Controllers
 {
@@ -12,6 +13,7 @@ namespace NGWalks.UI.Controllers
 		}
         public async Task<IActionResult> Index()
 		{
+			List<RegionDto> response = new List<RegionDto>();
 			//get all regions fro web api
 			try
 			{
@@ -20,16 +22,16 @@ namespace NGWalks.UI.Controllers
 
 				httpResponceMessage.EnsureSuccessStatusCode();
 
-				var stringResponceBody = await httpResponceMessage.Content.ReadAsStringAsync();
+				 response.AddRange(await httpResponceMessage.Content.ReadFromJsonAsync<IEnumerable<RegionDto>>());
 
-				ViewBag.Response = stringResponceBody;
+				
 			}
 			catch (Exception ex)
 			{
 
 				throw;
 			}
-			return View();
+			return View(response);
 		}
 	}
 }

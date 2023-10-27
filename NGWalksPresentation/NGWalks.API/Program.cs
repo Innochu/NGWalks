@@ -13,6 +13,7 @@ using System.Text;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using NGWalksCommon;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,7 @@ builder.Logging.AddSerilog(logger);
 builder.Services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateRegionDTOValidation>());
 builder.Services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<RegisterDTOValidations>());
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -75,6 +77,7 @@ builder.Services.AddDbContext<NGAuthDbContext>(options => options.UseSqlServer(b
 
 builder.Services.AddScoped<IRegionRepo, RegionRepo>();
 builder.Services.AddScoped<ITokenRepo, TokenRepo>();
+builder.Services.AddScoped<IImageRepository, ImageRepo>();
 
 
 builder.Services.AddAutoMapper(typeof(RegionAutomapper));
@@ -127,6 +130,12 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseStaticFiles(new StaticFileOptions
+{
+	FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Images")),
+	RequestPath = "/Images"
+});
 
 app.MapControllers();
 

@@ -40,7 +40,7 @@ namespace NGWalks.Presentation.Controllers
 			[FromQuery] int pageNumber , [FromQuery] int pageSize )
 		{
 			
-				throw new Exception("This is a custom exception");
+				//throw new Exception("This is a custom exception");
 
 				//_logger.LogInformation("GetAll Region action method was invoked");
 				//get data from database

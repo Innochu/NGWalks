@@ -1,0 +1,60 @@
+2023-10-27 01:28:29.449 +01:00 [INF] User profile is available. Using 'C:\Users\Decagon\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-27 01:28:29.837 +01:00 [INF] Now listening on: http://localhost:5126
+2023-10-27 01:28:29.842 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-27 01:28:29.844 +01:00 [INF] Hosting environment: Development
+2023-10-27 01:28:29.846 +01:00 [INF] Content root path: C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API
+2023-10-27 01:28:38.530 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/swagger/index.html - -
+2023-10-27 01:28:39.106 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/swagger/index.html - - - 200 - text/html;charset=utf-8 577.1215ms
+2023-10-27 01:28:39.155 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/_vs/browserLink - -
+2023-10-27 01:28:39.160 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/_framework/aspnetcore-browser-refresh.js - -
+2023-10-27 01:28:39.176 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 15.4893ms
+2023-10-27 01:28:39.190 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 37.3411ms
+2023-10-27 01:28:39.313 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/swagger/v1/swagger.json - -
+2023-10-27 01:28:39.494 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 181.3667ms
+2023-10-27 01:29:10.452 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5126/api/Image/Upload multipart/form-data;+boundary=----WebKitFormBoundaryaUFd1EhDsJUZikUa 35541
+2023-10-27 01:29:10.463 +01:00 [WRN] Failed to determine the https port for redirect.
+2023-10-27 01:29:10.586 +01:00 [INF] Executing endpoint 'NGWalks.Presentation.Controllers.ImageController.Upload (NGWalks.Presentation)'
+2023-10-27 01:29:10.626 +01:00 [INF] Route matched with {action = "Upload", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Upload(NGWalksDomain.ModelDTO.ImageUploadRequestDto) on controller NGWalks.Presentation.Controllers.ImageController (NGWalks.Presentation).
+2023-10-27 01:29:12.720 +01:00 [INF] Executed DbCommand (71ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Images] ([Id], [FileDescription], [FileExtention], [FileName], [FilePath], [FileSizeInBytes])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-10-27 01:29:12.780 +01:00 [INF] Executing OkObjectResult, writing value of type 'NGWalksDomain.Models.Image'.
+2023-10-27 01:29:12.835 +01:00 [INF] Executed action NGWalks.Presentation.Controllers.ImageController.Upload (NGWalks.Presentation) in 2198.2576ms
+2023-10-27 01:29:12.839 +01:00 [INF] Executed endpoint 'NGWalks.Presentation.Controllers.ImageController.Upload (NGWalks.Presentation)'
+2023-10-27 01:29:12.850 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5126/api/Image/Upload multipart/form-data;+boundary=----WebKitFormBoundaryaUFd1EhDsJUZikUa 35541 - 200 - application/json;+charset=utf-8 2397.9687ms
+2023-10-27 01:58:52.050 +01:00 [INF] User profile is available. Using 'C:\Users\Decagon\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-27 01:58:52.418 +01:00 [INF] Now listening on: http://localhost:5126
+2023-10-27 01:58:52.423 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-27 01:58:52.425 +01:00 [INF] Hosting environment: Development
+2023-10-27 01:58:52.428 +01:00 [INF] Content root path: C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API
+2023-10-27 01:58:59.680 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/swagger/index.html - -
+2023-10-27 01:59:00.358 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/swagger/index.html - - - 200 - text/html;charset=utf-8 693.7389ms
+2023-10-27 01:59:00.413 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/_vs/browserLink - -
+2023-10-27 01:59:00.419 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/_framework/aspnetcore-browser-refresh.js - -
+2023-10-27 01:59:00.451 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/_framework/aspnetcore-browser-refresh.js - - - 200 12372 application/javascript;+charset=utf-8 30.7137ms
+2023-10-27 01:59:00.494 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 81.2568ms
+2023-10-27 01:59:00.684 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/swagger/v1/swagger.json - -
+2023-10-27 01:59:01.062 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 377.8376ms
+2023-10-27 01:59:35.602 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5126/api/Image/Upload multipart/form-data;+boundary=----WebKitFormBoundaryu4X736fICEYPQs2l 22375
+2023-10-27 01:59:35.615 +01:00 [WRN] Failed to determine the https port for redirect.
+2023-10-27 01:59:35.757 +01:00 [INF] Executing endpoint 'NGWalks.Presentation.Controllers.ImageController.Upload (NGWalks.Presentation)'
+2023-10-27 01:59:35.805 +01:00 [INF] Route matched with {action = "Upload", controller = "Image"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Upload(NGWalksDomain.ModelDTO.ImageUploadRequestDto) on controller NGWalks.Presentation.Controllers.ImageController (NGWalks.Presentation).
+2023-10-27 01:59:39.192 +01:00 [INF] Executed DbCommand (112ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Images] ([Id], [FileDescription], [FileExtention], [FileName], [FilePath], [FileSizeInBytes])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-10-27 01:59:39.298 +01:00 [INF] Executing OkObjectResult, writing value of type 'NGWalksDomain.Models.Image'.
+2023-10-27 01:59:39.399 +01:00 [INF] Executed action NGWalks.Presentation.Controllers.ImageController.Upload (NGWalks.Presentation) in 3580.446ms
+2023-10-27 01:59:39.405 +01:00 [INF] Executed endpoint 'NGWalks.Presentation.Controllers.ImageController.Upload (NGWalks.Presentation)'
+2023-10-27 01:59:39.428 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5126/api/Image/Upload multipart/form-data;+boundary=----WebKitFormBoundaryu4X736fICEYPQs2l 22375 - 200 - application/json;+charset=utf-8 3825.2952ms
+2023-10-27 02:00:24.547 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/Images/chi.jpg.jpg - -
+2023-10-27 02:00:24.600 +01:00 [INF] Sending file. Request path: '/chi.jpg.jpg'. Physical path: 'C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\Images\chi.jpg.jpg'
+2023-10-27 02:00:24.604 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/Images/chi.jpg.jpg - - - 200 35156 image/jpeg 57.1726ms
+2023-10-27 02:00:24.791 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/favicon.ico - -
+2023-10-27 02:00:24.796 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/favicon.ico - - - 404 0 - 4.9634ms
+2023-10-27 02:00:41.233 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5126/Images/WhatsApp Image 2023-09-26 at 22.17.31_61404c9a.jpg.jpg - -
+2023-10-27 02:00:41.244 +01:00 [INF] Sending file. Request path: '/WhatsApp Image 2023-09-26 at 22.17.31_61404c9a.jpg.jpg'. Physical path: 'C:\Users\Decagon\Desktop\NGWalks\NGWalksPresentation\NGWalks.API\Images\WhatsApp Image 2023-09-26 at 22.17.31_61404c9a.jpg.jpg'
+2023-10-27 02:00:41.248 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5126/Images/WhatsApp Image 2023-09-26 at 22.17.31_61404c9a.jpg.jpg - - - 200 22053 image/jpeg 15.0363ms
